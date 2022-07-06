@@ -434,7 +434,7 @@ impl Plot {
             .unwrap_or_else(|_| panic!("failed to export plot to {:?}", filename.as_ref()));
     }
 
-    fn render(
+    pub fn render(
         &self,
         export_image: bool,
         image_type: &str,
