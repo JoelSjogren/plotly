@@ -454,7 +454,7 @@ impl Plot {
         tmpl.render().unwrap()
     }
 
-    fn render_inline(&self, plot_div_id: &str) -> String {
+    pub fn render_inline(&self, plot_div_id: &str) -> String {
         let tmpl = InlinePlotTemplate {
             plot: self,
             plot_div_id,
