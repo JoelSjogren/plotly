@@ -434,7 +434,7 @@ impl Plot {
             .unwrap_or_else(|_| panic!("failed to export plot to {:?}", filename.as_ref()));
     }
 
-    fn render(
+    pub fn render(
         &self,
         export_image: bool,
         image_type: &str,
@@ -454,7 +454,7 @@ impl Plot {
         tmpl.render().unwrap()
     }
 
-    fn render_inline(&self, plot_div_id: &str) -> String {
+    pub fn render_inline(&self, plot_div_id: &str) -> String {
         let tmpl = InlinePlotTemplate {
             plot: self,
             plot_div_id,
